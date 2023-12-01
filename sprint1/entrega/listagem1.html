@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listagem</title>
+</head>
+
+<body>
+
+
+  
+    <script>
+        var cabecalho = "<h1>Comex</h1>";
+        var conteudo =
+            "<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. At fugit, mollitia iusto recusandae cupiditate dolorum.</p>";
+        var rodape = "<p>.:: Alura LEVEL UP ::.</p>";
+        var codigo = 0;
+        var nome1 = "Ingrid";
+        var anoAtual = 2023;
+        var idadesAcumuladas = 0;
+        var pula = "<br>";
+
+        function pularLinha() {
+            document.write("<br><hr>");
+        }
+
+        function formatarIdades(anoNascimento) {
+            var resultado;
+            resultado = anoAtual - anoNascimento;
+            return resultado;
+        }
+
+        function registrarCliente(nomeCliente, mesNascimento, anoNascimento) {
+            codigo = codigo + 1;
+            document.write("Código: " + codigo);
+            pularLinha();
+
+            document.write("seu nome é "+ nomeCliente + pula + " seu mês de nascimento é: " + mesNascimento + pula + " seu ano de nascimento: " + anoNascimento);
+            idadesAcumuladas = idadesAcumuladas +  formatarIdades(anoNascimento);
+            pularLinha();
+            
+            
+        }
+        registrarCliente("Fulano", "Janeiro", 1980);
+        registrarCliente("ciclano", "maio", 1981);
+        registrarCliente("beltrano", "novembro", 1984);
+
+        document.write("<p>*** Estatisticas ***</p>");
+        document.write("soma das idades " + idadesAcumuladas + "<br>");
+        calcularMedia();
+        document.write("<hr>");
+        document.write(rodape);
+
+        function calcularMedia() {
+            let resultado;
+            resultado = Math.round (idadesAcumuladas/3);
+            document.write("media das idades: " + resultado);
+        }
+
+    </script>
+    
+
+</body>
+
+</html>
