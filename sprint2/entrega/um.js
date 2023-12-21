@@ -1,65 +1,96 @@
-        var rodape = "<p>.:: Alura LEVEL UP ::.</p>";
-        var codigo = 0;
-        var nome1 = "Ingrid";
-        var anoAtual = 2023;
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            << COMEX>>
+        </h1>
+        <hr>
+    </header>
+
+    <main>
+        <p><strong> .:: Lista de clientes ::. </strong></p>
+        <hr>
+
+
+
+    </main>
+
+    <script>
+        var numeroClientes = 0;
         var idadesAcumuladas = 0;
-        var pula = "<br>";
+        var anoAtual = parseInt(prompt("Digite o ano atual"));
 
-        function pularLinha() {
-            document.write("<br><hr>");
+
+        function pulaLinha() {
+            document.write("<br>");
+            document.write("<hr>");
         }
 
-        function formatarIdades(anoNascimento) {
-            var resultado;
-            resultado = anoAtual - anoNascimento;
-            return resultado;
+
+        function registrarClientes(nome, mesNascimento, anoNascimento) {
+            numeroClientes += 1;
+            document.write(`Código ${numeroClientes} <br>`);
+            document.write(
+                `Nome: ${nome} <br> Mês de nascimento: ${mesNascimento} <br> Ano de nascimento: ${anoNascimento} <br>`
+            );
+            idadesAcumuladas += formatarIdade(anoNascimento);
+
+
+            pulaLinha();
+
         }
 
-        function registrarCliente(nomeCliente, mesNascimento, anoNascimento) {
-            codigo = codigo + 1;
-            document.write("Código: " + codigo);
-            pularLinha();
+        function formatarIdade(anoNascimento) {
+            let idade;
 
-            document.write("seu nome é "+ nomeCliente + pula + " seu mês de nascimento é: " + mesNascimento + pula + " seu ano de nascimento: " + anoNascimento);
-            idadesAcumuladas = idadesAcumuladas +  formatarIdades(anoNascimento);
-            pularLinha();
-            
-            
+            idade = anoAtual - anoNascimento;
+            if (idade <= 17) {
+                document.write("Classificação etária: Adolescente" + "<br>");
+            }
+            if (idade >= 18 && idade <= 29) {
+                document.write("Classificação etária: Jovem" + "<br>");
+            }
+            if (idade >= 30 && idade <= 59) {
+                document.write("Classificação etária: Adulto" + "<br>");
+            }
+
+            if (idade >= 60) {
+                document.write("Classificação etária: Idoso" + "<br>");
+            }
+
+            document.write(`Sua idade é: ${idade}`);
+            return idade;
         }
-        registrarCliente("Fulano", "Janeiro", 1980);
-        registrarCliente("ciclano", "maio", 1981);
-        registrarCliente("beltrano", "novembro", 1984);
 
-        document.write("<p>*** Estatisticas ***</p>");
-        document.write("soma das idades " + idadesAcumuladas + "<br>");
-        calcularMedia();
-        document.write("<hr>");
-        document.write(rodape);
+        function somaDasIdades() {
+            document.write(`O resultado das idades acumuladas são: ${idadesAcumuladas} <br>`);
+        }
 
-        function calcularMedia() {
+        function mediaDasIdades() {
             let resultado;
-            resultado = Math.round (idadesAcumuladas/3);
-            document.write("media das idades: " + resultado);
-        
-        if idade <= 17 ("ADOLESCENTE")
-        else if idade >= 18 && idade <=29 ("JOVEM") 
-        else if idade >=30 && idade <=59 ("ADULTO")
-        if idade >= 60 ("IDOSO")
-        }
 
-let idade = 35
-if(idade <= 17) {
-    document.write("ADOLESCENTE")
-}
-else if(idade >= 18 && idade <=29) {
-    document.write("JOVEM")
-}
-else if(idade >=30 && idade <=59) {
-    document.write("ADULTO")
-}
-else if(idade >= 60) {
-    document.write("IDOSO")
-}
-else {
-    document.write("Idade Inválida")
-}
+            resultado = Math.round(idadesAcumuladas / 3);
+            document.write(`A  média das idades é: ${resultado}`);
+        }
+        
+        registrarClientes("Luiz", "Novembro", 2003);
+        registrarClientes("Fulano", "Julho", 1950);
+        registrarClientes("Sicrano", "Janeiro", 1950);
+
+        document.write("<h2> Estatísticas </h2>");
+        somaDasIdades();
+        mediaDasIdades();
+        pulaLinha();
+        document.write("<footer> <p><strong> .:: Alura LEVEL UP ::. </strong></p></footer>")
+    </script>
+</body>
+
+</html>
