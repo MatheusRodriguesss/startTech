@@ -1,4 +1,4 @@
-public class Main {
+public class listagemProdutos {
     public static void main(String[] args) {
         System.out.println("Seja bem vindo a livraria Comex!");
 
@@ -19,8 +19,6 @@ public class Main {
         System.out.println("--------------------------------");
 
         for (int i = 1; i <= 5; i++) {
-
-
             System.out.print(i);
         }
     }
