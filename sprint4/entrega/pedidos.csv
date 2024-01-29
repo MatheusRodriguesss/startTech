@@ -13,4 +13,4 @@ INSERT INTO pedidos (categoria,produto,preco,quantidade,datas,cliente) VALUES ('
 INSERT INTO pedidos (categoria,produto,preco,quantidade,datas,cliente) VALUES ('MÓVEIS','Cama queen size',3100.00,2,'2022-01-07','DANI');
 INSERT INTO pedidos (categoria,produto,preco,quantidade,datas,cliente) VALUES ('AUTOMOTIVA','Central multimidia',711.18,1,'2022-01-16','CAIO');
 INSERT INTO pedidos (categoria,produto,preco,quantidade,datas,cliente) VALUES ('LIVROS','Building Microservices',300.28,2,'2022-01-11','CAIO');
-INSERT INTO pedidos (categoria,produto,preco,quantidade,datas,cliente) VALUES ('INFO','Galaxy Tab S8',5939.10,4,'2022-01-02','BIA');
+INSERT INTO pedidos (categoria,produto,preco,quantidade,datas,cliente) VALUES ('INFO','Galaxy Tab S8',5939.10,4,'2022-01-02','BIA'); 

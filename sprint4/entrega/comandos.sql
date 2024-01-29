@@ -30,4 +30,4 @@ SELECT * FROM pedido WHERE preco >= 3000.00 AND preco <= 10000.00;
 
 SELECT * FROM pedido WHERE preco >= 3000.00 AND preco <= 10000.00;
 
-DELETE FROM pedido WHERE quantidade = 1 OR cliente = "BIA";
+DELETE FROM pedido WHERE quantidade = 1 OR cliente = "BIA"; 
