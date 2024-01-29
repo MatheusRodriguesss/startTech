@@ -9,7 +9,7 @@ INSERT cliente(nome) VALUES ("ELI");
 INSERT cliente(nome) VALUES ("DANI");
 INSERT cliente(nome) VALUES ("GABI");
 INSERT cliente(nome) VALUES ("BIA");
-INSERT cliente(nome) VALUES ("CAIO");
+INSERT cliente(nome) VALUES ("CAIO"); 
 
 INSERT produto(nome,preco,categoria_id) VALUES ("Notebook Samsung",3523.00,1);
 INSERT produto(nome,preco,categoria_id) VALUES ("Sofá 3 lugares",2500.00,2);
