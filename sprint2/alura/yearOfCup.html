@@ -1,0 +1,29 @@
+<meta charset="utf-8" />
+<script>
+  function dropLine() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+  function show(phrase) {
+    document.write(phrase);
+    dropLine();
+  }
+  var currentDate = new Date();
+  currentYear = currentDate.getFullYear();
+
+  var myFirstCup = 2002;
+  var fisrtCup = 1930;
+  while (fisrtCup)
+  
+    while (myFirstCup < currentYear) {
+        
+        if (myFirstCup == 2002) {
+            show("The first cup after my birth year was in: " + myFirstCup)
+        }
+        myFirstCup = myFirstCup + 4;
+        if (myFirstCup <= currentYear){ 
+        show("There was a cup in: " + myFirstCup);
+        }
+        }
+        show("The last year of cup was: " + (myFirstCup - 4) + " and the next cup will be realized: " + myFirstCup)
+</script>
